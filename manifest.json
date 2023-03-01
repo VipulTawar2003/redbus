@@ -1,0 +1,38 @@
+{
+    "name": "redbus-pro",
+    "start_url": "/red-bus",
+    "background_color": "black",
+    "theme_color": "red",
+    "display": "standalone",
+    "description": "By Vipul Tawar",
+    "icons": [
+        {
+            "src": "./images/Icon-36.png",
+            "sizes": "36x36"
+        },
+        {
+            "src": "./images/Icon-48.png",
+            "sizes": "48x48"
+        },
+        {
+            "src": "./images/Icon-72.png",
+            "sizes": "72x72"
+        },
+        {
+            "src": "./images/Icon-96.png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "./images/Icon-144.png",
+            "sizes": "144x144"
+        },
+        {
+            "src": "./images/Icon-192.png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "./images/Icon-512.png",
+            "sizes": "512x512"
+        }
+    ]
+}

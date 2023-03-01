@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap By SKILLHUB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+</head>
+<style>
+    .bus {
+        display: flex;
+        flex-wrap: wrap;
+        width: 200px;
+    }
+
+    .seat {
+        height: 100px;
+        width: 50px;
+        border: 2px solid gray;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .success {
+        background-color: green;
+    }
+</style>
+
+<body>
+    <!-- 
+step 1 create seat layout
+step 2  build select logic
+step 3  deselect
+step 4   booking logic
+step 5   billing logic
+
+
+   -->
+    <div id="output"></div>
+    <div class="seat-select"></div>
+    <div class="bus">
+        <div onclick="handleSeatSelect('s1')" class="seat" id="s1">1</div>
+        <div onclick="handleSeatSelect('s2')" class="seat" id="s2">2</div>
+        <div onclick="handleSeatSelect('s3')" class="seat" id="s3">3</div>
+        <div onclick="handleSeatSelect('s4')" class="seat" id="s4">4</div>
+        <div onclick="handleSeatSelect('s5')" class="seat" id="s5">5</div>
+        <div onclick="handleSeatSelect('s6')" class="seat" id="s6">6</div>
+        <div onclick="handleSeatSelect('s7')" class="seat" id="s7">7</div>
+        <div onclick="handleSeatSelect('s8')" class="seat" id="s8">8</div>
+        <div onclick="handleSeatSelect('s9')" class="seat" id="s9">9</div>
+        <div onclick="handleSeatSelect('s10')" class="seat" id="s10">10</div>
+        <div onclick="handleSeatSelect('s11')" class="seat" id="s11">11</div>
+        <div onclick="handleSeatSelect('s12')" class="seat" id="s12">12</div>
+    </div>
+
+
+    </h3>
+    <h3 id="price"></h3>
+
+
+    <!-- java script -->
+
+
+
+    <script>
+
+        let seatprice = 500
+        let GST = 28 / 100
+
+        function handleSeatSelect(seatId) {
+            let hasClass = document.getElementById(seatId).classList.contains("bg-success")
+            if (hasClass) {
+                document.getElementById(seatId).classList.remove("bg-success")
+            } else {
+                document.getElementById(seatId).classList.add("bg-success")
+
+            }
+            let x = document.querySelectorAll(".bg-success")
+            let seatIds = ""
+            for (let i = 0; i < x.length; i++) {
+                console.log(x[i].id);
+                seatIds += x[i].id + ","
+            }
+
+
+            console.log(`You Have Selected ${x.length}Seats`);
+            console.log(`You have select seat number ${seatIds}`);
+            document.getElementById("output").innerHTML = `<div class="alert alert-success">  
+            <h2>  You Have Selected ${x.length} seats </h2>
+            <p>Est.Price  ${x.length * 500}</p> 
+            <p>GST ${x.length * 500 / 100 * 28}</p> 
+            <hr> 
+            <h2>Total ${x.length * seatprice + seatprice / 100 * 28 * x.length}</h2> 
+
+            </div>`
+
+
+
+            // document.getElementById("price").innerHTML = ` your total amount is ${x.length * 500} `
+            console.log(x);
+
+
+        }
+        ASS
+    </script>
+    <!-- 
+    localstoragw
+    promises
+    call by value and call by 
+ -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
