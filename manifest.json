@@ -1,6 +1,6 @@
 {
     "name": "redbus-pro",
-    "start_url": "/red-bus",
+    "start_url": "/redbus",
     "background_color": "black",
     "theme_color": "red",
     "display": "standalone",
